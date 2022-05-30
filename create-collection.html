@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a collection</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <h1 class="logo">Kasper</h1>
+        <ul class="list-items">
+            <li class="list1 menulist"><a href="/index.html">Home</a></li>
+            <li class="list2 menulist sub-link"><a href="/categories.html">Categories</a>
+                <ul class="submenu-link">
+                    <li class="submenu-link-item"><a href="#"">Art & Culture</a></li>
+                    <li class="submenu-link-item"><a href="#">History</a></li>
+                    <li class="submenu-link-item"><a href="#">Archaeology</a></li>
+                    <li class="submenu-link-item"><a href="#">Artifacts</a></li>
+                </ul>
+            </li>
+            <li class="list3 menulist"><a href="/museums.html">Museums</a></li>
+            <li class="list3 menulist"><a href="/desktop-2.html">Shop</a></li>
+            <li class="list4 menulist sub-link"><a href="#">Profile</a>
+                <ul class="submenu-link">
+                    <li class="submenu-link-item">
+                        <img src="./Images/Vector 688.svg" alt="">
+                        <a href="/profile.html">Profile</a>
+                    </li>
+                    <li class="submenu-link-item">
+                        <img src="./Images/Vector 689.svg" alt="">
+                        <a href="#">Favourites</a>
+                    </li>
+                    <li class="submenu-link-item">
+                        <img src="./Images/Vector 690.svg" alt="">
+                        <a href="/cart.html">Carts</a>
+                    </li>
+                    <li class="submenu-link-item">
+                        <img src="./Images/Vector 691.svg" alt="">
+                        <a href="#">Collected</a>
+                    </li>
+                    <li class="submenu-link-item">
+                        <img src="./Images/Vector 692.svg" alt="">
+                        <a href="#">Hidden</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- ======================== create a collection =========================== -->
+    <div class="create-collection-container">
+        <h1>Create A Collection</h1>
+        <p class="asterisk">*</p>
+        <p class="required">Required fields</p>
+        <div class="create-collection-field">
+            <h3>Featured Image</h3>
+            <p class="asterisk">*</p>
+            <div class="create-collection-file">
+                <input type="file">
+                <img src="/Images/image-icon.svg" alt="">
+            </div>
+        </div>
+        <div class="input-name">
+            <h3>Name</h3>
+            <p class="asterisk">*</p>
+            <input type="text">
+        </div>
+        <div class="input-description">
+            <h3>Description</h3>
+            <p>O of 1,000 characters used</p>
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+        </div>
+        <div class="input-description">
+            <h3>Category</h3>
+            <p>Adding a category will help make your item discoverable on kasper.</p>
+            <button class="collection-button">
+                <a href="/yoruba-collection.html">Add category</a>
+            </button>
+        </div>
+
+        <button class="create-collection-button">
+            <a href="/admin-profile-collection.html">Create</a>
+        </button>
+        
+    </div>
+
+
+
+
+
+
+    <script src="index.js"></script>
+</body>
+</html>
