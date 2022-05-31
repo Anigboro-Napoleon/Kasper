@@ -11,22 +11,22 @@
     <nav class="navbar">
         <h1 class="logo">Kasper</h1>
         <ul class="list-items">
-            <li class="list1 menulist"><a href="/index.html">Home</a></li>
-            <li class="list2 menulist sub-link"><a href="/categories.html">Categories</a>
+            <li class="list1 menulist"><a class="nav-link" href="/index.html">Home</a></li>
+            <li class="list2 menulist sub-link"><a class="nav-link" href="/categories.html">Categories</a>
                 <ul class="submenu-link">
-                    <li class="submenu-link-item"><a href="#"">Art & Culture</a></li>
-                    <li class="submenu-link-item"><a href="#">History</a></li>
-                    <li class="submenu-link-item"><a href="#">Archaeology</a></li>
-                    <li class="submenu-link-item"><a href="#">Artifacts</a></li>
+                    <li class="submenu-link-item"><a href="/categories.html">Art & Culture</a></li>
+                    <li class="submenu-link-item"><a href="/categories.html">History</a></li>
+                    <li class="submenu-link-item"><a href="/categories.html">Archaeology</a></li>
+                    <li class="submenu-link-item"><a href="/categories.html">Artifacts</a></li>
                 </ul>
             </li>
-            <li class="list3 menulist"><a href="/museums.html">Museums</a></li>
-            <li class="list3 menulist"><a href="/desktop-2.html">Shop</a></li>
-            <li class="list4 menulist sub-link"><a href="#">Profile</a>
+            <li class="list3 menulist"><a class="nav-link" href="/museums.html">Museums</a></li>
+            <li class="list3 menulist"><a class="nav-link" href="/desktop-2.html">Shop</a></li>
+            <li class="list4 menulist sub-link"><a class="nav-link" href="#">Profile</a>
                 <ul class="submenu-link">
                     <li class="submenu-link-item">
                         <img src="./Images/Vector 688.svg" alt="">
-                        <a href="/profile.html">Profile</a>
+                        <a class="nav-link" href="/profile.html">Profile</a>
                     </li>
                     <li class="submenu-link-item">
                         <img src="./Images/Vector 689.svg" alt="">
@@ -57,7 +57,7 @@
                 <ul class="admin-profile-link">
                     <li class="admin-profile-link-item">
                         <img src="./Images/created.svg" alt="">
-                        <a href="#">Created</a>
+                        <a class="admin-link" href="#">Created</a>
                     </li>
                     <li class="admin-profile-link-item">
                         <img src="./Images/favorites.svg" alt="">
@@ -69,7 +69,7 @@
                     </li>
                     <li class="admin-profile-link-item">
                         <img src="./Images/collection.svg" alt="">
-                        <a href="/cart.html">Collection</a>
+                        <a class="admin-link" href="/admin-profile-collection.html">Collection</a>
                     </li>
                 </ul>
                 <div class="admin-profile-section2">
@@ -131,6 +131,13 @@
 
 
 
-    <script src="index.js"></script>
+    <script>
+        const adminLinks = document.querySelectorAll('.admin-link');
+        adminLinks.forEach(adminLink => {
+            if (adminLink.href === window.location.href) {
+                adminLink.setAttribute('aria-current', 'page');
+            }
+        })
+    </script>
 </body>
 </html>

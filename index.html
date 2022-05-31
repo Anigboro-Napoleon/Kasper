@@ -11,22 +11,22 @@
     <nav class="navbar">
         <h1 class="logo">Kasper</h1>
         <ul class="list-items">
-            <li class="list1 menulist"><a href="/index.html">Home</a></li>
-            <li class="list2 menulist sub-link"><a href="/categories.html">Categories</a>
+            <li class="list1 menulist"><a class="nav-link" href="/index.html">Home</a></li>
+            <li class="list2 menulist sub-link"><a class="nav-link" href="/categories.html">Categories</a>
                 <ul class="submenu-link">
-                    <li class="submenu-link-item"><a href="#"">Art & Culture</a></li>
-                    <li class="submenu-link-item"><a href="#">History</a></li>
-                    <li class="submenu-link-item"><a href="#">Archaeology</a></li>
-                    <li class="submenu-link-item"><a href="#">Artifacts</a></li>
+                    <li class="submenu-link-item"><a href="/categories.html">Art & Culture</a></li>
+                    <li class="submenu-link-item"><a href="/categories.html">History</a></li>
+                    <li class="submenu-link-item"><a href="/categories.html">Archaeology</a></li>
+                    <li class="submenu-link-item"><a href="/categories.html">Artifacts</a></li>
                 </ul>
             </li>
-            <li class="list3 menulist"><a href="/museums.html">Museums</a></li>
-            <li class="list3 menulist"><a href="/desktop-2.html">Shop</a></li>
-            <li class="list4 menulist sub-link"><a href="#">Profile</a>
+            <li class="list3 menulist"><a class="nav-link" href="/museums.html">Museums</a></li>
+            <li class="list3 menulist"><a class="nav-link" href="/user-sign-in.html">Shop</a></li>
+            <li class="list4 menulist sub-link"><a class="nav-link" href="#">Profile</a>
                 <ul class="submenu-link">
                     <li class="submenu-link-item">
                         <img src="./Images/Vector 688.svg" alt="">
-                        <a href="/profile.html">Profile</a>
+                        <a class="nav-link" href="/profile.html">Profile</a>
                     </li>
                     <li class="submenu-link-item">
                         <img src="./Images/Vector 689.svg" alt="">
@@ -56,8 +56,8 @@
             <p class="text-1">Kasper</p>
             <h1>Gallery</h1>
             <p class="text-2">A collection of Extraordinary <br/>Artworks and History</p>
-            <button class="button1 hero-button"><a href="#">Explore</a></button>
-            <button class="button2 hero-button"><a href="#">Curate</a></button>
+            <button class="button1 hero-button"><a href="/categories.html">Explore</a></button>
+            <button class="button2 hero-button" onclick="curatePopup()"><a href="#">Curate</a></button>
             <p class="text-3">“Art is turning something cute into a<span class="masterpiece"> Masterpiece</span>”</p>
         </div>
         <div class="right-hero">
@@ -66,7 +66,7 @@
                 <img class="right-hero-image" src="/Images/Ellipse 3.svg" alt="">
                 <div class="right-hero-text">
                     <h4>The Masterpiece</h4>
-                    <h4><a href="" class="link-twi">stoned_architect</a></h4>
+                    <h4><a href="/artist-catalogue.html" class="link-twi">stoned_architect</a></h4>
                 </div>
             </div>
         </div>
@@ -101,13 +101,13 @@
                 <img src="/Images/Rectangle 10.png" alt="" width="550px">
                 <h1>Art & Culture</h1>
                 <p>Explore our collection of beautiful and thought provoking artworks</p>
-                <button class="button1 hero-button"><a href="#">Get Started</a></button>
+                <button class="button1 hero-button"><a href="/categories.html">Get Started</a></button>
             </div>
             <div class="second-gallery gallery">
                 <img src="/Images/Rectangle 21.png" alt="" width="550px">
                 <h1>Archaeology</h1>
                 <p>Walk through our collection of past<br/> human discoveries</p>
-                <button class="button1 hero-button"><a href="#">Get Started</a></button>
+                <button class="button1 hero-button"><a href="/categories.html">Get Started</a></button>
             </div>
         </div>
         <div class="gallery-1">
@@ -115,17 +115,49 @@
                 <img src="/Images/Rectangle 14.png" alt="" width="550px">
                 <h1>Artifacts</h1>
                 <p>Discover the rich history behind various<br /> artifatcts</p>
-                <button class="button1 hero-button"><a href="#">Get Started</a></button>
+                <button class="button1 hero-button"><a href="/categories.html">Get Started</a></button>
             </div>
             <div class="second-gallery gallery">
                 <img src="/Images/Rectangle 16.png" alt="" width="550px">
                 <h1>History</h1>
                 <p>A look at human history and the desicions<br/> that led to where we are today</p>
-                <button class="button1 hero-button"><a href="#">Get Started</a></button>
+                <button class="button1 hero-button"><a href="/categories.html">Get Started</a></button>
             </div>
         </div>
-        <button class="explore-gallery"><a href="#">Explore the gallery</a></button>
+        <button class="explore-gallery"><a href="/categories.html">Explore the gallery</a></button>
     </div>
+
+    <!-- ========================== Sign in popup -->
+
+    <form name="adminForm" class="admin-sign-in-body">
+        <div class="admin-sign-in curate-sign-in" id="curate-sign-in">
+            <div class="close">
+                <p>Welcome Back</p>
+                <img onclick="closePopup()" src="/Images/times-circle.svg" alt="" width="20px">
+            </div>            
+            <h1>Sign In</h1>
+            <input placeholder="username" name="username" type="text">
+            <div class="password-input">
+                <input placeholder="password" name="password" class="password" type="password">
+                <img src="/Images/icons-eye.svg" alt="" class="click-show-pass">
+            </div>
+            <h6>forgot password?</h6>
+            <button class="continue-admin" onclick="continueAdmin()">
+                <a href="#">Continue</a>                
+            </button>
+            <h5>or continue with</h5>
+            <a href="#" target="_blank">
+                <img class="social-icon google" src="/Images/Vector-google.svg" alt="">
+            </a>
+            <a href="#" target="_blank">
+                <img class="social-icon" src="/Images/Vector-facebook.svg" alt="">
+            </a>            
+            <h5>don't have an account?</h5>
+            <button class="sign-up-admin" id="admin-sign-up-button" onclick="showSignup()">
+                <a href="#">Sign Up</a>                
+            </button>
+        </div>
+    </form>
 
     <!-- ==============================footer section============================= -->
 
@@ -185,6 +217,48 @@
 
 
 
-    <script src="index.js"></script>
+    <script>
+        const navLinks = document.querySelectorAll('.nav-link');
+        navLinks.forEach(navLink => {
+            if (navLink.href === window.location.href) {
+                navLink.setAttribute('aria-current', 'page');
+            }
+        })
+
+        const curateSignIn = document.getElementById('curate-sign-in');
+        const adminSignInBody = document.getElementsByClassName('admin-sign-in-body');
+        
+        const curatePopup = () => {
+            curateSignIn.classList.add('open-curate-sign-in');
+        }
+
+        const closePopup = () => {
+            curateSignIn.classList.remove('open-curate-sign-in');
+        }
+
+        const adminSignUpButton = document.getElementById('admin-sign-up-button');
+        adminSignUpButton.addEventListener('click', () => {
+            window.location.href = 'admin-sign-up.html';
+        })
+
+        const continueAdmin = () => {
+            const userName = document.forms['adminForm']['username'].value;
+            const password = document.forms['adminForm']['password'].value;
+            if (userName === 'kasper' && password === 'adeleke') {
+                window.location.href = 'admin-profile.html';
+            } else {
+            alert('Invalid Username or Password. Try again!!');
+            }
+        }
+
+            const password = document.querySelector('.password');
+            const clickShowPass = document.querySelector('.click-show-pass');
+
+            clickShowPass.addEventListener('click', () => {
+                const type = password.getAttribute("type") === "password" ? "text" : "password";
+                password.setAttribute("type", type);
+            })
+        
+    </script>
 </body>
 </html>

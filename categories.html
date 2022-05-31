@@ -11,22 +11,22 @@
     <nav class="navbar">
         <h1 class="logo">Kasper</h1>
         <ul class="list-items">
-            <li class="list1 menulist"><a href="/index.html">Home</a></li>
-            <li class="list2 menulist sub-link"><a href="/categories.html">Categories</a>
+            <li class="list1 menulist"><a class="nav-link" href="/index.html">Home</a></li>
+            <li class="list2 menulist sub-link"><a class="nav-link" href="/categories.html">Categories</a>
                 <ul class="submenu-link">
-                    <li class="submenu-link-item"><a href="#"">Art & Culture</a></li>
-                    <li class="submenu-link-item"><a href="#">History</a></li>
-                    <li class="submenu-link-item"><a href="#">Archaeology</a></li>
-                    <li class="submenu-link-item"><a href="#">Artifacts</a></li>
+                    <li class="submenu-link-item"><a href="/categories.html">Art & Culture</a></li>
+                    <li class="submenu-link-item"><a href="/categories.html">History</a></li>
+                    <li class="submenu-link-item"><a href="/categories.html">Archaeology</a></li>
+                    <li class="submenu-link-item"><a href="/categories.html">Artifacts</a></li>
                 </ul>
             </li>
-            <li class="list3 menulist"><a href="/museums.html">Museums</a></li>
-            <li class="list3 menulist"><a href="/desktop-2.html">Shop</a></li>
-            <li class="list4 menulist sub-link"><a href="#">Profile</a>
+            <li class="list3 menulist"><a class="nav-link" href="/museums.html">Museums</a></li>
+            <li class="list3 menulist"><a class="nav-link" href="/user-sign-in.html">Shop</a></li>
+            <li class="list4 menulist sub-link"><a class="nav-link" href="#">Profile</a>
                 <ul class="submenu-link">
                     <li class="submenu-link-item">
                         <img src="./Images/Vector 688.svg" alt="">
-                        <a href="/profile.html">Profile</a>
+                        <a class="nav-link" href="/profile.html">Profile</a>
                     </li>
                     <li class="submenu-link-item">
                         <img src="./Images/Vector 689.svg" alt="">
@@ -99,7 +99,7 @@
                 </div>
             </div>
         </div>
-        <button class="browse"><a href="#">Browse</a></button>
+        <button class="browse"><a href="/art-display.html">Browse</a></button>
     </div>
 
     <!-- ==============================second-category section============================= -->
@@ -146,7 +146,7 @@
                 </div>
             </div>
         </div>
-        <button class="browse"><a href="#">Browse</a></button>
+        <button class="browse"><a href="/categories.html">Browse</a></button>
     </div>
 
     <!-- ==============================third-category section============================= -->
@@ -193,7 +193,7 @@
                 </div>
             </div>
         </div>
-        <button class="browse"><a href="#">Browse</a></button>
+        <button class="browse"><a href="/categories.html">Browse</a></button>
     </div>
 
     <!-- ==============================fourth-category section============================= -->
@@ -240,7 +240,7 @@
                 </div>
             </div>
         </div>
-        <button class="browse-arch"><a href="#">Browse</a></button>
+        <button class="browse-arch"><a href="/categories.html">Browse</a></button>
     </div>
 
 
@@ -314,6 +314,13 @@
 
 
 
-    <script src="index.js"></script>
+    <script>
+        const navLinks = document.querySelectorAll('.nav-link');
+        navLinks.forEach(navLink => {
+            if (navLink.href === window.location.href) {
+                navLink.setAttribute('aria-current', 'page');
+            }
+        })
+    </script>
 </body>
 </html>

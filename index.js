@@ -21,3 +21,11 @@ const opensuccPopup = () => {
 confirmPopup.addEventListener('click', () => {
     confirmPopup.classList.remove('open-fail-popup');
 })
+
+// ==================== menu button
+    const navLinks = document.querySelectorAll('.nav-link');
+        navLinks.forEach(navLink => {
+            if (navLink.href === window.location.href) {
+                navLink.setAttribute('aria-current', 'page');
+            }
+        })
