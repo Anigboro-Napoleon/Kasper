@@ -294,34 +294,55 @@ a {
 }
 
 .gallery-1 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    margin-top: 100px;
+    margin-top: 60px;
 }
 
-.gallery {
-    position: relative;
+.first-gallery {
+    background-color: #20202000;
+    display: flex;
+    align-items: center;
+    margin-bottom: 60px;
 }
 
-.gallery h1 {
+.second-gallery {
+    background-color: #20202000;
+    display: flex;
+    align-items: center;
+}
+
+.first-gallery-block {
+    margin-left: 60px;
+}
+
+.second-gallery-block {
+    margin-left: 60px;
+}
+
+.first-gallery h1 {
     background-color: #d9d9d900;
     color: #fff;
     font-size: 3rem;
-    text-align: center;
 }
-.gallery p {
+.first-gallery p {
     background-color: #d9d9d900;
     color: #fff;
     font-size: 1.3125rem;
-    text-align: center;
+    margin-bottom: 20px;
 }
 
-.gallery button {
-    margin: 0;
-    position: absolute;
-    top: 470px;
-    left: 230px
+.second-gallery h1 {
+    background-color: #d9d9d900;
+    color: #fff;
+    font-size: 3rem;
+}
+.second-gallery p {
+    background-color: #d9d9d900;
+    color: #fff;
+    font-size: 1.3125rem;
+    margin-bottom: 20px;
 }
 
 .explore-gallery {
@@ -515,17 +536,18 @@ a {
     background: #360270;
     border-radius: 20px;
     cursor: pointer;
-    padding: 15px 150px;
     font-size: 1.3rem;
     font-weight: 500;
     margin-top: 50px;
     margin-bottom: 50px;
+    padding: 10px 0;
     width: 60%;
     margin-left: 20%;
 }
 
 .browse a {
     color: #fff;
+    padding: 45px 150px;
 }
 
 .second-category-section-title {
@@ -728,8 +750,9 @@ a {
 .profile-image {
     background-color: #20202000;
     position: absolute;
-    top: -105px;
-    left: 525px;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .profile-collected {
@@ -928,7 +951,6 @@ a {
 .cart-button {
     margin-top: 20px;
     background-color: #360270;
-    color: #fff;
     cursor: pointer;
     display: inline;
     border-radius: 10px;
@@ -937,6 +959,9 @@ a {
     border: none;
     margin-right: 10px;
     margin-left: 55px;
+}
+.cart-button a {
+    color: #fff;
 }
 
 /* ============================== popup =================================== */
@@ -1091,23 +1116,23 @@ a {
     background-color: #f7f7f7;
     border-radius: 20px;
     position: absolute;
-    /* top: 50%; */
-    top: 0;
+    top: 50%;
+    /* top: 0; */
     left: 50%;
-    /* transform: translate(-50%, -50%) scale(1); */
-    transform: translate(-50%, -50%) scale(0.1);
+    transform: translate(-50%, -50%) scale(1);
+    /* transform: translate(-50%, -50%) scale(0.1); */
     padding: 20px 40px;
-    /* visibility: visible; */
-    visibility: hidden;
+    visibility: visible;
+    /* visibility: hidden; */
     transition: transform 0.4s, top 0.4s;
     box-shadow: 0px 2px 12px rgba(70, 70, 70, 0.388);
 }
-
+/* 
 .open-successful-popup {
     top: 50%;
     transform: translate(-50%, -50%) scale(1);
     visibility: visible;
-}
+} */
 
 .successful-popup-head {
     font-size: 2.3rem;
@@ -1378,8 +1403,9 @@ a {
 .admin-profile-image {
     background-color: #20202000;
     position: absolute;
-    top: -105px;
-    left: 525px;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .admin-profile-collected {
@@ -1431,6 +1457,7 @@ a {
 
 .admin-profile-section2 {
     background-color: #4A4949;
+    padding-bottom: 40px;
 }
 
 .admin-profile-blocks {
