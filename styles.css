@@ -830,6 +830,10 @@ a {
     margin-bottom: 150px;
 }
 
+.profile-block-button a {
+    color: #000;
+}
+
 .profile-block-description-container {
     background-color: #d9d9d900;
     margin-left: 80px;
