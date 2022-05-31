@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="admin-sign-in-body">
+        <form name="exploreForm" method="post" class="admin-sign-in">
+            <p>Welcome Back</p>
+            <h1>Sign In</h1>
+            <input placeholder="username" name="username" type="text">
+            <div class="password-input">
+                <input class="password" placeholder="password" name="password" type="password">
+                <img src="/Images/icons-eye.svg" class="click-show-pass" onclick="showPassword()" alt="">
+            </div>
+            <h6>forgot password?</h6>
+            <button class="continue-admin" onclick="continueShop()">
+                <a href="#">Continue</a>                
+            </button>
+            <h5>or continue with</h5>
+            <a href="#" target="_blank">
+                <img class="social-icon google" src="/Images/Vector-google.svg" alt="">
+            </a>
+            <a href="#" target="_blank">
+                <img class="social-icon" src="/Images/Vector-facebook.svg" alt="">
+            </a>            
+            <h5>don't have an account?</h5>
+            <button class="sign-up-admin" id="user-sign-up-button">
+                <a href="#">Sign Up</a>                
+            </button>
+        </form>
+    </div>
+
+
+    <script>
+
+
+        const userSignUpButton = document.getElementById('user-sign-up-button');
+        userSignUpButton.addEventListener('click', () => {
+            window.location.href = 'user-sign-up.html';
+        })
+        
+        const continueShop = () => {
+            const userName = document.forms['exploreForm']['username'].value;
+            const password = document.forms['exploreForm']['password'].value;
+            if (userName === 'kasper' && password === 'adeleke') {
+                window.location.href = 'categories.html';
+            } else {
+            alert('Invalid Username or Password. Try again!!');
+            }
+        }
+
+            const password = document.querySelector('.password');
+            const clickShowPass = document.querySelector('.click-show-pass');
+
+            clickShowPass.addEventListener('click', () => {
+                const type = password.getAttribute("type") === "password" ? "text" : "password";
+                password.setAttribute("type", type);
+            })
+            
+
+        
+    </script>
+</body>
+</html>
