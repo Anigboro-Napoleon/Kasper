@@ -25,13 +25,18 @@
             <input class="sign-up3" placeholder="Address" type="text">
             <input class="sign-up4 for-margin" placeholder="City" type="text">
             <input class="sign-up4" placeholder="State" type="text">
-            <button class="sign-up-continue">
+            <button class="sign-up-continue" id="curate-sign-up-button">
                 <a href="#">Continue</a> 
             </button>
         </div>
     </div>
 
 
-    <script src="index.js"></script>
+    <script>
+        const adminContinueButton = document.getElementById('curate-sign-up-button');
+        adminContinueButton.addEventListener('click', () => {
+            window.location.href = 'admin-profile.html';
+        })
+    </script>
 </body>
 </html>
